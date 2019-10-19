@@ -1,12 +1,9 @@
-$colorCode : #383D4B;
-$iconColor:#1a40a5;
-$themeColor1:#2754ff;
-$themeColor2:#7C8294;
-$boxBorderColor:#B6BCC5;
-$fontFamily1: 'system-ui';
+$colorCode : #D0CFCF;
+$iconColor:#0cd2fd;
+$themeColor1:#fe3562db;
+$themeColor2:#787273;
 
 .input-items {
-    margin: 10px 0;
     ion-label {
         position: relative;
         left: 30px;
@@ -14,15 +11,13 @@ $fontFamily1: 'system-ui';
         background: #fff;
         z-index: 9999;
         font-size: 11px;
-        font-weight: 600;
-        padding: 5px 5px;
-        color: #000;
-        // text-transform: uppercase;
-        font-family: $fontFamily1;
+        padding: 0 5px;
+        color: $colorCode;
+        text-transform: uppercase;
     }
 
     ion-input {
-        border: 1px solid $boxBorderColor;
+        border: 1px solid $colorCode;
         border-radius: 3px;
 
         ion-icon {
@@ -43,25 +38,23 @@ $fontFamily1: 'system-ui';
     width: 60%;
     color: #fff;
     height: 38px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     border-radius: 3px;
     background-color: $themeColor1;
     margin: 15px 0;
-    font-family: $fontFamily1; 
 }
 .hightlight-txt{
     font-weight: 600;
     color:$themeColor2;
-    font-family: $fontFamily1;
 }
 
 ion-card{
     margin:20px;
     ion-card-header{
-        padding: 15px;
+        padding: 10px;
     }
 }
 .welcome-txt{
@@ -69,5 +62,4 @@ ion-card{
     font-size: 23px;
     font-weight: 700;
     color: $themeColor2;
-    font-family: $fontFamily1;
 }
