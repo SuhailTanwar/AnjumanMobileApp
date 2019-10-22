@@ -1,7 +1,7 @@
-$colorCode : #383D4B;
-$iconColor:#1a40a5;
-$themeColor1:#2754ff;
-$themeColor2:#7C8294;
+$colorCode : #3c4043;
+$iconColor:#6f71b1;
+$themeColor1:#6264a7;
+$themeColor2:#3c4043;
 $boxBorderColor:#B6BCC5;
 $fontFamily1: 'system-ui';
 
@@ -13,10 +13,11 @@ $fontFamily1: 'system-ui';
         top: 8px;
         background: #fff;
         z-index: 9999;
-        font-size: 11px;
+        font-size: 12px;
         font-weight: 600;
-        padding: 5px 5px;
-        color: #000;
+        letter-spacing: .25;
+        padding: 0 5px;
+        color: $colorCode;
         // text-transform: uppercase;
         font-family: $fontFamily1;
     }
@@ -24,6 +25,7 @@ $fontFamily1: 'system-ui';
     ion-input {
         border: 1px solid $boxBorderColor;
         border-radius: 3px;
+        color:inherit;
 
         ion-icon {
             padding: 8px;
@@ -36,7 +38,7 @@ $fontFamily1: 'system-ui';
 .frgt-psswrd-lbl {
     text-align: right;
     margin: 10px 0;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .login-btn {
@@ -51,6 +53,9 @@ $fontFamily1: 'system-ui';
     background-color: $themeColor1;
     margin: 15px 0;
     font-family: $fontFamily1; 
+    -webkit-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
 }
 .hightlight-txt{
     font-weight: 600;
@@ -60,6 +65,7 @@ $fontFamily1: 'system-ui';
 
 ion-card{
     margin:20px;
+    color:#3c4043 !important;
     ion-card-header{
         padding: 15px;
     }
