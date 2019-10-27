@@ -1,9 +1,8 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>create-account</ion-title>
   </ion-toolbar>
-</ion-header>
-
+</ion-header> -->
 <ion-content>
   <div class="welcome-txt">
     <label>Welcome back!</label>
@@ -12,8 +11,32 @@
   <ion-card>
     <ion-card-header>
       <div class="input-items">
-        <ion-label position="stacked">Username</ion-label>
-        <ion-input>
+        <ion-label position="stacked">First Name</ion-label>
+        <ion-input type="text">
+          <ion-icon name="person"></ion-icon>
+        </ion-input>
+      </div>
+      <div class="input-items">
+        <ion-label position="stacked">Father's Name</ion-label>
+        <ion-input type="text">
+          <ion-icon name="person"></ion-icon>
+        </ion-input>
+      </div>
+      <div class="input-items">
+        <ion-label position="stacked">Last Name</ion-label>
+        <ion-input type="text">
+          <ion-icon name="person"></ion-icon>
+        </ion-input>
+      </div>
+      <div class="input-items">
+        <ion-label position="stacked">Mobile</ion-label>
+        <ion-input type="number">
+          <ion-icon name="call"></ion-icon>
+        </ion-input>
+      </div>
+      <div class="input-items">
+        <ion-label position="stacked">Email ID</ion-label>
+        <ion-input type="mail">
           <ion-icon name="mail"></ion-icon>
         </ion-input>
       </div>
@@ -23,15 +46,56 @@
           <ion-icon name="lock"></ion-icon>
         </ion-input>
       </div>
-      <div class="frgt-psswrd-lbl hightlight-txt">
-        <span>Forgot Password?</span>
+      <div class="input-items">
+        <ion-label position="stacked">Confirm Password</ion-label>
+        <ion-input type="password">
+          <ion-icon name="lock"></ion-icon>
+        </ion-input>
       </div>
-      <div [ngStyle]="{'text-align':'center'}">
-        <button class="login-btn">SIGN IN </button>
+      <div class="input-items">
+        <ion-label position="stacked">Confirm Password</ion-label>
+        <ion-input type="password">
+          <ion-icon name="lock"></ion-icon>
+        </ion-input>
+      </div>
+      <div class="input-items">
+        <ion-label position="stacked">Gender</ion-label>
+        <div class="gender-parent-wrapper">
+
+          <span class="custom-radio genderWrapper col-sm-6">
+            <input type="radio" class="custom-control-input" id="Male" name="gender">
+            <label class="custom-control-label" for="Male">Male</label>
+          </span>
+
+          <span class="custom-radio genderWrapper col-sm-6">
+            <input type="radio" class="custom-control-input" id="Female" name="gender">
+            <label class="custom-control-label" for="Female">Female</label>
+          </span>
+        </div>
+      </div>
+      <div>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle btn-custom" type="button" id="dropdownMenuButton"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
+      </div>
+      <div>
+
       </div>
 
-      <div [ngStyle]="{'font-size':'11px','text-align':'center'}">
-        Don't have an account?<span class="hightlight-txt"> Create a new Account</span>
+      <div [ngStyle]="{'text-align':'center'}">
+        <button class="submit-btn">SIGN UP </button>
+      </div>
+
+      <div [ngStyle]="{'font-size':'11px','text-align':'center','font-family':'system-ui'}">
+        Already have an account?<span class="hightlight-txt"  [routerLink]="['/']"> Sign In</span>
       </div>
     </ion-card-header>
   </ion-card>
