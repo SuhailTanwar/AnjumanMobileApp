@@ -1,8 +1,37 @@
 @import "../../theme/common.varaible.scss";
 
 .frgt-psswrd-lbl {
-    text-align: right;
-    margin: 10px 0;
-    font-size: 12px;
+  text-align: right;
+  margin: 10px 0;
+  font-size: 12px;
 }
 
+@media only screen and (min-width: 1024px) {
+  ion-card {
+    width: 450px;
+    margin: 60px auto;
+    padding: 20px;
+  }
+  .input-items ion-input {
+    font-size: 16px;
+    margin: 5px 0 0 0;
+  }
+  .input-items ion-input ion-icon {
+    font-size: 25px;
+  }
+  .frgt-psswrd-lbl {
+    font-size: 14px;
+  }
+
+  .sign-up-class {
+    font-size: 14px;
+    text-align: center;
+  }
+  .input-items {
+    margin: 20px 0;
+  }
+  .submit-btn {
+    height: 45px;
+    font-size: 14px;
+  }
+}

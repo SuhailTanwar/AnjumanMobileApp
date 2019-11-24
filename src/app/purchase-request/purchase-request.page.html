@@ -1,0 +1,60 @@
+<ion-content>
+  <div class="welcome-txt">
+    <label>Purchase Request Page</label>
+  </div>
+
+  <ion-card>
+    <ion-card-header>
+
+      <div class="input-items">
+        <label for="">Reason</label>
+        <ion-input>
+
+        </ion-input>
+      </div>
+      <div class="input-items">
+        <label for="">Description</label>
+        <textarea rows="4" id="itemDescription" name="itemDescription" tabindex="0"></textarea>
+      </div>
+
+      <div class="item-list-section">
+        <label for="" [style.width]="'70%'" >Item Name</label>
+        <label for="" [style.width]="'30%'" >Quantity</label>
+        <div *ngFor="let item of itemList; let index = index" class="item-list-wrapper">
+          <div class="delete-item-wrappr" [class.hide-section]="index === 0">
+            <ion-icon name="trash" class="delete-icon" (click)="deleteItem(index)"></ion-icon>
+          </div>
+
+          <div class="item-list">
+            <p-dropdown [options]="listOfItems" [filter]="true" id="level1" placeholder="Select Item"
+              panelStyleClass="dropdownPanel" name="'itemBox' + index" [(ngModel)]="item.itemName"
+              (onChange)="checkVal()" autoWidth="false">
+            </p-dropdown>
+          </div>
+          <div class="item-list-quantity">
+            <p-dropdown [options]="quantity" [filter]="false" id="level1" placeholder="Select Quantity"
+              panelStyleClass="dropdownPanel" name="'quantityBox' + index" [(ngModel)]="item.quantity"
+              (onChange)="checkVal()" autoWidth="false">
+            </p-dropdown>
+            <!-- <select name="" id="orgStructureVersion" [(ngModel)]="item.quantity"
+              (ngModelChange)="getOrgStructureVersionData()">
+              <option *ngFor="let orgData of 100" [ngValue]="orgData.orgId">
+                {{orgData.orgName}}</option>
+            </select> -->
+          </div>
+
+        </div>
+      </div>
+
+      <div [ngStyle]="{'text-align':'right'}">
+        <ion-icon name="add-circle-outline" (click)="addNewRow()"></ion-icon>
+      </div>
+
+      <div [ngStyle]="{'text-align':'center'}" class="create-btn">
+        <button class="submit-btn" [routerLink]="['/purchase-request']">CREATE </button>
+      </div>
+
+
+    </ion-card-header>
+  </ion-card>
+</ion-content>

@@ -21,7 +21,7 @@
   ion-input {
     border: 1px solid $boxBorderColor;
     border-radius: 3px;
-    color: inherit;
+    color: #000;
 
     ion-icon {
       padding: 8px;
@@ -50,8 +50,7 @@
 
 ion-card {
   margin: 20px;
-  color: #3c4043 !important;
-
+  background-color:#fff;
   ion-card-header {
     padding: 15px;
   }
@@ -75,9 +74,10 @@ ion-card {
 }
 
 .hightlight-txt {
-    font-weight: 600;
-    color: $themeColor2;
-    font-family: $fontFamily1;
+  font-weight: 600;
+  color: $themeColor1;
+  font-family: $fontFamily1;
+  cursor: pointer;
 }
 
 .welcome-txt {
@@ -86,4 +86,41 @@ ion-card {
   font-weight: 700;
   color: $themeColor2;
   font-family: $fontFamily1;
+}
+
+@media only screen and (min-width: 1024px) {
+  ion-card {
+    width: 450px;
+    margin: 60px auto;
+    padding: 20px;
+  }
+  .input-items ion-input {
+    font-size: 16px;
+    margin: 5px 0 0 0;
+  }
+  .input-items ion-input ion-icon {
+    font-size: 25px;
+  }
+  .frgt-psswrd-lbl {
+    font-size: 14px;
+  }
+
+  .sign-up-class {
+    font-size: 14px;
+    text-align: center;
+  }
+  .input-items {
+    margin: 20px 0;
+  }
+  .submit-btn {
+    height: 45px;
+    font-size: 14px;
+  }
+}
+
+ion-content {
+  --ion-background-color: #f7f7f7;
+}
+ion-card {
+  --ion-background-color: #fff;
 }

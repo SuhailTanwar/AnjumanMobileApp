@@ -6,13 +6,13 @@
   <ion-card>
     <ion-card-header>
       <div class="input-items">
-        <ion-label position="stacked">Username</ion-label>
+        <label for="">Username</label>
         <ion-input>
           <ion-icon name="mail"></ion-icon>
         </ion-input>
       </div>
       <div class="input-items">
-        <ion-label position="stacked">Password</ion-label>
+        <label for="">Password</label>
         <ion-input type="password">
           <ion-icon name="lock"></ion-icon>
         </ion-input>
@@ -21,12 +21,12 @@
         <span>Forgot Password?</span>
       </div>
       <div [ngStyle]="{'text-align':'center'}">
-        <button class="submit-btn">SIGN IN </button>
+        <button class="submit-btn" [routerLink]="['/purchase-request']">SIGN IN </button>
       </div>
 
-      <div [ngStyle]="{'font-size':'11px','text-align':'center'}">
+      <div class="sign-up-class">
         Don't have an account?<span class="hightlight-txt"  [routerLink]="['/create-account']"> Sign Up</span>
-      </div>
+      </div> 
     </ion-card-header>
   </ion-card>
 </ion-content>
